@@ -1,3 +1,5 @@
 <?php
 
-echo "This is inside public folder yessss";
+require_once '../app/init.php';
+
+$app = new App;
