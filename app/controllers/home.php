@@ -2,14 +2,11 @@
 
 class Home extends Controller
 {
-	public function index($name = '',$phone = '')
+	public function index($name = '')
 	{
-		echo $name . ' ' . $phone;
-	}
-
-	public  function  test()
-	{
-		echo "test Controller";
+		 $user = $this->model('User');
+		 $user->name = $name;
+		 echo $user->name;
 	}
 
 }
