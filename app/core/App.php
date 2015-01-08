@@ -2,8 +2,31 @@
 
 class App
 {
+	
+/*
 	public function __construct()
 	{
-		echo "string";
+		echo "OK!";
 	}
+
+*/
+	protected $controller = 'home';
+
+	protected  $method = 'index';
+
+	protected $params = [];
+
+	public function __construct()
+	{
+		$this->parseUrl();
+	}
+
+	public function parseUrl()
+	{
+		if(isset($_GET['url']))
+		{
+			echo $_GET['url'];
+		}
+	}
+	
 }
